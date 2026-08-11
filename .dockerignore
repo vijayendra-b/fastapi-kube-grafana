@@ -1,0 +1,7 @@
+venv
+helm-chart
+.git
+.gitignore
+README.md
+*.zip
+

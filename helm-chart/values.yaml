@@ -1,0 +1,9 @@
+replicaCount: 2
+
+image:
+  repository: vijayendra1/inventory-api
+  tag: "v1"
+
+service:
+  type: ClusterIP
+  port: 8000
