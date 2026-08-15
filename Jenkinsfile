@@ -56,6 +56,10 @@ pipeline {
 
                     sh """
                     ssh -o StrictHostKeyChecking=no ubuntu@${EC2_HOST} '
+
+                    cd /home/ubuntu/final-capstone-inventory-api
+
+                    git pull origin main
                     
                     export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
