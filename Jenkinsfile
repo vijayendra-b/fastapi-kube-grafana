@@ -57,7 +57,7 @@ pipeline {
                     sh """
                     ssh -o StrictHostKeyChecking=no ubuntu@${EC2_HOST} '
 
-                    cd /home/ubuntu/final-capstone-inventory-api
+                    cd /home/ubuntu/fastapi-kube-grafana
 
                     git pull origin main
                     
