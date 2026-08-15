@@ -60,6 +60,7 @@ pipeline {
                     export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
                     cd /home/ubuntu/final-capstone-inventory-api
+                    ls -l
 
                     helm upgrade --install inventory-api ./helm-chart \
                     --set image.repository=${IMAGE_NAME} \
