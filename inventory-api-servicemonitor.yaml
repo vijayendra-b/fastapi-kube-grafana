@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+
+metadata:
+  name: inventory-api-monitor
+  namespace: monitoring
+
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/managed-by: Helm
+
+  namespaceSelector:
+    matchNames:
+    - default
+
+  endpoints:
+  - port: http
+    path: /metrics
+    interval: 15s

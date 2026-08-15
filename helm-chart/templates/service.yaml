@@ -10,8 +10,9 @@ spec:
     app: inventory-api
 
   ports:
-  - protocol: TCP
+  - name: http
+    protocol: TCP
     port: 8000
-    targetPort: 8000
+ 
 
   type: {{ .Values.service.type }}
